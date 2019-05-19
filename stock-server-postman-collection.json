@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "e8bffbb1-b407-4922-bf04-213937625a3a",
+		"name": "Stock Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Stock Prices By Stock Symbol",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/stock/AAU",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"stock",
+						"AAU"
+					]
+				},
+				"description": "It can fetch Stock price of given stock symbol it take default stock exchanges \"AMEX\""
+			},
+			"response": []
+		},
+		{
+			"name": "GET Stock Price By Stock Symbol and Stock Exchange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/stock/AAC?stock_exchange=NYSE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"stock",
+						"AAC"
+					],
+					"query": [
+						{
+							"key": "stock_exchange",
+							"value": "NYSE"
+						}
+					]
+				},
+				"description": "It can fetch stock price of given stock symbol of given stock exchange"
+			},
+			"response": []
+		}
+	]
+}
